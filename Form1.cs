@@ -19,7 +19,7 @@ namespace FontChecker
         {
             InitializeComponent();
 
-            foreach(var font in Fonts.ToList(Fonts.Win10)) {
+            foreach(var font in Fonts.ToList(Fonts.Win7)) {
                 AddFontFamily(font);
             }
             

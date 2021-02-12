@@ -32,6 +32,59 @@ namespace FontChecker
             return ret;
         }
 
+        public const string Win7=
+@"Arial
+Calibri
+Cambria
+Cambria Math
+Candara
+Comic Sans MS
+Consolas
+Constantia
+Corbel
+Courier New
+Ebrima
+Franklin Gothic Medium
+Gabriola
+Georgia
+Impact
+Leelawadee UI
+Lucida Console
+Lucida Sans Unicode
+Malgun Gothic
+Meiryo UI
+Microsoft JhengHei
+Microsoft Sans Serif
+MingLiU-ExtB
+PMingLiU-ExtB
+Mongolian Baiti
+ＭＳ ゴシック
+ＭＳ Ｐゴシック
+MS UI Gothic
+ＭＳ 明朝
+ＭＳ Ｐ明朝
+Microsoft YaHei
+Microsoft Yi Baiti
+MV Boli
+Palatino Linotype
+Segoe Print
+Segoe Script
+Segoe UI
+Sylfaen
+Symbol
+Tahoma
+Times New Roman
+Trebuchet MS
+Verdana
+Webdings
+Microsoft Himalaya
+Microsoft New Tai Lue
+Microsoft PhagsPa
+SimSun
+NSimSun
+SimSun-ExtB
+Microsoft Tai Le";
+
         public const string Win10=
 @"Arial
 Calibri
