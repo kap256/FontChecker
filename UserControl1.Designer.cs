@@ -51,9 +51,10 @@ namespace FontChecker
             this.LabelSample.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.LabelSample.AutoSize = true;
             this.LabelSample.Location = new System.Drawing.Point(6, 15);
             this.LabelSample.Name = "LabelSample";
-            this.LabelSample.Size = new System.Drawing.Size(495, 36);
+            this.LabelSample.Size = new System.Drawing.Size(42, 12);
             this.LabelSample.TabIndex = 0;
             this.LabelSample.Text = "Sample";
             // 
@@ -65,6 +66,7 @@ namespace FontChecker
             this.Name = "UserControl1";
             this.Size = new System.Drawing.Size(515, 57);
             this.BoxFontName.ResumeLayout(false);
+            this.BoxFontName.PerformLayout();
             this.ResumeLayout(false);
 
         }
