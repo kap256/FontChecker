@@ -40,11 +40,13 @@ namespace FontChecker
         }
 
 
-        public UserControl1(string name, FontStyle style= FontStyle.Regular)
+        public UserControl1(string name, FontStyle style,int size,string text)
         {
             InitializeComponent();
             mFontName = name;
             mFontStyle = style;
+            mFontSize = size;
+            mSampleText = text;
             UpdateChilds();
         }
 

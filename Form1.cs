@@ -14,12 +14,11 @@ namespace FontChecker
     public partial class Form1 : Form
     {
 
-        List<UserControl1> mFonts=new List<UserControl1>();
         public Form1()
         {
             InitializeComponent();
             FontSet.Text = FontSet.Items[0].ToString();
-
+            UpdateButton_Click(null, null);
         }
         private void AddFontFamily(string font)
         {
@@ -35,11 +34,18 @@ namespace FontChecker
             AddFont(font, FontStyle.Italic);
             AddFont(font, FontStyle.Bold | FontStyle.Italic);
         }
+        private int GetSize()
+        {
+            int size;
+            if(!Int32.TryParse(FontSize.Text, out size)) {
+                size = 16;
+            }
+            return size;
+        }
         private void AddFont(string font, FontStyle style = FontStyle.Regular)
         {
-            var ctrl = new UserControl1(font,style);
+            var ctrl = new UserControl1(font,style,GetSize(),SampleText.Text);
             FontsPanel.Controls.Add(ctrl);
-            mFonts.Add(ctrl);
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -47,12 +53,11 @@ namespace FontChecker
             Process.Start(linkLabel1.Text);
         }
 
-        private void FontSet_TextChanged(object sender, EventArgs e)
+        private void UpdateButton_Click(object sender, EventArgs e)
         {
             for(int i=0;i< FontSet.Items.Count; i++) {
                 if(FontSet.Text == FontSet.Items[i].ToString()) {
                     FontsPanel.Controls.Clear();
-                    mFonts.Clear();
                     switch(i) {
                         case 0:
                             foreach(var font in Fonts.ToList(Fonts.Win7)) {
