@@ -36,6 +36,7 @@ namespace FontChecker
 @"Arial
 Calibri
 Cambria
+Cambria Math
 Candara
 Comic Sans MS
 Consolas
@@ -88,6 +89,7 @@ Microsoft Tai Le";
 @"Arial
 Calibri
 Cambria
+Cambria Math
 Candara
 Comic Sans MS
 Consolas

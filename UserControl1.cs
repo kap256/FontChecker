@@ -58,8 +58,8 @@ namespace FontChecker
             if(mFontName != LabelSample.Font.Name) {
                 LabelSample.ForeColor = Color.Red;
             }
-
-            this.Width = Math.Max(LabelSample.Width + 20,300);
+           
+            this.Width = Math.Min(Math.Max(LabelSample.Width + 20, 300), 1500);
             this.Height = LabelSample.Height + 20;
         }
     }
