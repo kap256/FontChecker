@@ -18,16 +18,7 @@ namespace FontChecker
         public Form1()
         {
             InitializeComponent();
-
-            foreach(var font in Fonts.ToList(Fonts.Win7)) {
-                AddFontFamily(font);
-            }
-            
-            /*
-            foreach(var font in Fonts.GetInstalledFonts()) {
-                AddFontFamily(font);
-            }
-            */
+            FontSet.Text = FontSet.Items[0].ToString();
 
         }
         private void AddFontFamily(string font)
@@ -54,6 +45,35 @@ namespace FontChecker
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(linkLabel1.Text);
+        }
+
+        private void FontSet_TextChanged(object sender, EventArgs e)
+        {
+            for(int i=0;i< FontSet.Items.Count; i++) {
+                if(FontSet.Text == FontSet.Items[i].ToString()) {
+                    FontsPanel.Controls.Clear();
+                    mFonts.Clear();
+                    switch(i) {
+                        case 0:
+                            foreach(var font in Fonts.ToList(Fonts.Win7)) {
+                                AddFontFamily(font);
+                            }
+                            break;
+                        case 1:
+                            foreach(var font in Fonts.ToList(Fonts.Win10)) {
+                                AddFontFamily(font);
+                            }
+                            break;
+                        case 2:
+                            foreach(var font in Fonts.GetInstalledFonts()) {
+                                AddFontFamily(font);
+                            }
+                            break;
+
+                    }
+                    break;
+                }
+            }
         }
     }
 }

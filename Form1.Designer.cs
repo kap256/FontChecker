@@ -31,6 +31,8 @@ namespace FontChecker
             this.FontsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
+            this.FontSet = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // FontsPanel
@@ -66,18 +68,43 @@ namespace FontChecker
             this.label1.TabIndex = 2;
             this.label1.Text = "参考：";
             // 
+            // FontSet
+            // 
+            this.FontSet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FontSet.FormattingEnabled = true;
+            this.FontSet.Items.AddRange(new object[] {
+            "Window7標準",
+            "Window10標準",
+            "インストール済み全て"});
+            this.FontSet.Location = new System.Drawing.Point(83, 6);
+            this.FontSet.Name = "FontSet";
+            this.FontSet.Size = new System.Drawing.Size(155, 20);
+            this.FontSet.TabIndex = 3;
+            this.FontSet.TextChanged += new System.EventHandler(this.FontSet_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 12);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "フォントセット";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1584, 861);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.FontSet);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.FontsPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "フォント一式を比較したい";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -88,6 +115,8 @@ namespace FontChecker
         private System.Windows.Forms.FlowLayoutPanel FontsPanel;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox FontSet;
+        private System.Windows.Forms.Label label2;
     }
 }
 
